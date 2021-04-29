@@ -1,12 +1,20 @@
 require 'bundler'
 Bundler.require
 
-$:.unshift File.expand_path('./../lib', __FILE__)
-require 'app/game'
-require 'app/player'
-require 'app/board'
-require 'app/board_case'
-require 'app/show'
-require 'app/application'
+require_relative 'lib/game.rb'
 
-application = Application.new
+game = Game.new
+nb = 0
+while game.end_game != true 
+    game.round
+    nb += 2.25
+   if  nb > 9
+    puts "                       _                    _ "
+    puts "             _        | |                  | |"
+    puts " ____   ____| |_  ____| | _     ____  _   _| |"
+    puts "|    \\ / _  |  _)/ ___) || \\   |  _ \\| | | | |"
+    puts "| | | ( ( | | |_( (___| | | |  | | | | |_| | |"
+    puts "|_|_|_|\\_||_|\\___)____)_| |_|  |_| |_|\\____|_|"
+       break
+   end
+end
