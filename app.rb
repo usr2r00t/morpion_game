@@ -8,6 +8,5 @@ require 'app/board'
 require 'app/board_case'
 require 'app/show'
 require 'app/application'
-#binding.pry
 
 application = Application.new
