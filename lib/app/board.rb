@@ -18,7 +18,7 @@ class Board
 
   def play_turn(player)
     puts
-    puts "Quelle case restante souhaites-tu jouer ?"
+    puts "Which remaining square do you want to play ?"
     print ">"
     choice = gets.chomp
     @grid[choice]= "#{player.player_value}"
